@@ -145,7 +145,7 @@ if ($msg and $isadmin and $id)
     mysql_query("DELETE FROM $tab WHERE chat_id = $id");
     
   }
-elseif (!$id and $msg and $chatID > 0)
+elseif (!$id and $msg and $chatID > 0 and $isadmin)
   {
     sm($chatID, "To reply, reply to a forwarded message");
   }
