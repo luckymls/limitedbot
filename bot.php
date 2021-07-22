@@ -90,7 +90,7 @@ if ($msg == "/start" and $chatID > 0)
     if ($isadmin)
         $text = "Welcome! This is your bot! To reply: reply to forwarded message";
     sm($chatID, $text);
-    break;
+    
   }
 
 #---------------Manage Point------------------------
@@ -105,7 +105,7 @@ if (strpos(' ' . $msg, "ban") and $isadmin)
     sm($id, "You have been $t" . "banned from the bot!");
     
     mysql_query("update $tab set ban='$x' where chat_id='$id'");
-    break;
+    
   }
 
 
